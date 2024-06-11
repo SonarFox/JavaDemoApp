@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>FizzBang</title>
+</head>
+<body>
+    <h1>Enter a number from 0 to 100</h1>
+    <form action="/fizzbang" method="post">
+        <input type="number" name="number" min="0" max="100" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
