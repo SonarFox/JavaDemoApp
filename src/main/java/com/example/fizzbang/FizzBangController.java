@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.http.HttpStatus;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class FizzBangController {
 
@@ -30,20 +33,23 @@ public class FizzBangController {
             throw new IllegalArgumentException("Number must be between 0 and 100");
         }
 
-        StringBuilder result = new StringBuilder();
+        List<String> result = new ArrayList<>();
+        int fizzBangCount = 0; // Counter for "FizzBang"
         for (int i = 1; i <= number; i++) {
             if (i % 3 == 0 && i % 5 == 0) {
-                result.append("FizzBang<br>");
+                result.add("FizzBang");
+                fizzBangCount++; // Increment the counter
             } else if (i % 3 == 0) {
-                result.append("Fizz<br>");
+                result.add("Fizz");
             } else if (i % 5 == 0) {
-                result.append("Bang<br>");
+                result.add("Bang");
             } else {
-                result.append(i).append("<br>");
+                result.add(String.valueOf(i));
             }
         }
-        model.addAttribute("result", result.toString());
-        logger.info("Processed FizzBang for number: {}", number);
+        model.addAttribute("result", result);
+        model.addAttribute("fizzBangCount", fizzBangCount); // Add the counter to the model
+        logger.info("Processed FizzBang for number: {}. FizzBang was printed {} times.", number, fizzBangCount);
         return "result";
     }
 
