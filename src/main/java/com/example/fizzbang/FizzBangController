@@ -1,0 +1,34 @@
+package com.example.fizzbang;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class FizzBangController {
+
+    @GetMapping("/")
+    public String index() {
+        return "index";
+    }
+
+    @PostMapping("/fizzbang")
+    public String fizzBang(@RequestParam("number") int number, Model model) {
+        StringBuilder result = new StringBuilder();
+        for (int i = 1; i <= number; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                result.append("FizzBang<br>");
+            } else if (i % 3 == 0) {
+                result.append("Fizz<br>");
+            } else if (i % 5 == 0) {
+                result.append("Bang<br>");
+            } else {
+                result.append(i).append("<br>");
+            }
+        }
+        model.addAttribute("result", result.toString());
+        return "result";
+    }
+}
