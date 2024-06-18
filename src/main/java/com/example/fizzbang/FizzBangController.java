@@ -37,6 +37,7 @@ public class FizzBangController {
         String databaseName "myDatabase";
         String password = "password123";
         String foo = "foo";
+        String bar = "bar";
 
         List<String> result = new ArrayList<>();
         int fizzBangCount = 0; // Counter for "FizzBang"
