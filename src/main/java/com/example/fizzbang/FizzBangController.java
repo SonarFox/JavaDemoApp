@@ -33,6 +33,9 @@ public class FizzBangController {
             throw new IllegalArgumentException("Number must be between 0 and 100");
         }
 
+        String userId = "LeeFox";
+        String databaseName "myDatabase";
+
         List<String> result = new ArrayList<>();
         int fizzBangCount = 0; // Counter for "FizzBang"
         for (int i = 1; i <= number; i++) {
