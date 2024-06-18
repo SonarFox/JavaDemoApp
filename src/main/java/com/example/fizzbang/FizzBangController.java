@@ -36,7 +36,6 @@ public class FizzBangController {
         String userId = "LeeFox";
         String databaseName "myDatabase";
         String password = "password123";
-        String url = "jdbc:mysql://localhost:3306/" + databaseName + "?user=" + userId + "&password=" + password;
         String idCode = "sfsdfsfsdf";
         String foo = "foo";
 
