@@ -35,6 +35,9 @@ public class FizzBangController {
 
         String userId = "LeeFox";
         String databaseName "myDatabase";
+        String password = "password123";
+        String url = "jdbc:mysql://localhost:3306/" + databaseName + "?user=" + userId + "&password=" + password;
+        String idCode = "sfsdfsfsdf";
 
         List<String> result = new ArrayList<>();
         int fizzBangCount = 0; // Counter for "FizzBang"
