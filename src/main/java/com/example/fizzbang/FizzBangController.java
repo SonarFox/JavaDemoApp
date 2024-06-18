@@ -34,7 +34,6 @@ public class FizzBangController {
         }
 
         String userId = "LeeFox";
-        String databaseName "myDatabase";
         String password = "password123";
         String foo = "foo";
 
