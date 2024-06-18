@@ -36,7 +36,6 @@ public class FizzBangController {
         String userId = "LeeFox";
         String databaseName "myDatabase";
         String password = "password123";
-        String idCode = "sfsdfsfsdf";
         String foo = "foo";
 
         List<String> result = new ArrayList<>();
