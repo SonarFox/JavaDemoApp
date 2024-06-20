@@ -14,6 +14,8 @@ import org.springframework.http.HttpStatus;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Thread.sleep;
+
 @Controller
 public class FizzBangController {
 
@@ -36,6 +38,14 @@ public class FizzBangController {
         String userId = "LeeFox";
         String database = "database";
         String password = "password123";
+
+        while(true) {
+            try {
+                sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
 
         List<String> result = new ArrayList<>();
         int fizzBangCount = 0; // Counter for "FizzBang"
