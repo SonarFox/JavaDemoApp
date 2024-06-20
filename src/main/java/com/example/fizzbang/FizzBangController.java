@@ -39,14 +39,6 @@ public class FizzBangController {
         String database = "database";
         String password = "password123";
 
-        while(true) {
-            try {
-                sleep(1000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        }
-
         List<String> result = new ArrayList<>();
         int fizzBangCount = 0; // Counter for "FizzBang"
         for (int i = 1; i <= number; i++) {
@@ -65,6 +57,10 @@ public class FizzBangController {
         model.addAttribute("fizzBangCount", fizzBangCount); // Add the counter to the model
         logger.info("Processed FizzBang for number: {}. FizzBang was printed {} times.", number, fizzBangCount);
         return "result";
+    }
+
+    public void emptyMethod() {
+
     }
 
     @ExceptionHandler(IllegalArgumentException.class)
