@@ -36,4 +36,4 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=SonarFox_JavaDemoApp_2c13c144-2ab3-4994-94a2-ae96231d20e9
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=SonarFox_JavaDemoApp_4a2817e8-9e43-4506-b0c1-0a3cdf351905 -Dsonar.projectName='JavaDemoApp'
