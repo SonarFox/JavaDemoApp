@@ -19,7 +19,7 @@
     </parent>
 
     <properties>
-        <sonar.organization>sonarfox-1</sonar.organization>
+        <sonar.organization>sonarfox</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <java.version>11</java.version>
         <start-class>com.example.fizzbang.FizzBangApplication</start-class>
